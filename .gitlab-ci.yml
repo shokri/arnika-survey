@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+
+deploy:
+  stage: deploy
+  only:
+    - master
+
+  script:
+    - echo "Deploying to docker"
+    - docker-compose -f docker-compose.prod.yaml up -d --build  
+    - echo "Deployed"

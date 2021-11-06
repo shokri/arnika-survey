@@ -1,0 +1,21 @@
+$color1: #0066cc;
+$color2: #03335b;
+$color3: #ff640d;
+$color4: #ff2f00;
+$color5: #585858;
+$color6: #dedede;
+$color7: #ffffff;
+
+$xs: "(max-width: 413.98px)";
+$sm: "(max-width: 575.98px)";
+$md: "(max-width: 767.98px)";
+$lg: "(max-width: 991.98px)";
+$xl: "(max-width: 1199.98px)";
+$xxl: "(max-width: 1365.98px)";
+$xxxl: "(max-width: 1919.98px)";
+$min-lg: "(min-width: 991.98px)";
+@mixin respond-to($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
